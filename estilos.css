@@ -1,0 +1,204 @@
+/*Estan son las propiedades que se aplican para resoluciones mayores de 900px*/
+body {
+
+    background-color:black;
+}
+header{
+	padding: 3px 10px;
+	margin-bottom: none;	
+	background: -webkit-linear-gradient(left, #5b7989 , #5b7989);
+	background: -o-linear-gradient(right, #5b7989 , #5b7989);
+	background: -moz-linear-gradient(right, #5b7989 , #5b7989);
+	background: linear-gradient(to right, #5b7989 , #5b7989);
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;		
+}
+#menuCabecera a{
+  color:white;
+  
+	}
+#contenido2 {
+    background-color:grey;
+	text-align: center;
+	border: 1px;
+	width: 100%;
+	
+}
+
+header h1{
+	padding-left: 10px;
+	color:white;
+	text-shadow: 4px 4px #02010a; /* lo hice a 4px para verlo mejor*/
+}
+#menuCabecera{
+    width: 100%;
+    text-align: right;
+	color:white;
+  }
+  #menuCabecera .actual,.paisajes,.retratos{
+  text-decoration: none;
+}
+  footer{
+	padding: 3px 10px;
+	margin-bottom: 5px;
+	background: -webkit-linear-gradient(left, #C6d5c5 , #C6d5c5);
+	background: -o-linear-gradient(right, #C6d5c5 , #C6d5c5);
+	background: -moz-linear-gradient(right, #C6d5c5 , #C6d5c5);
+	background: linear-gradient(to right, #C6d5c5 , #C6d5c5);
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;		
+}
+footer {
+	width: 100%;
+	color:white;
+    display: flex;
+	flex-direction: row;
+	margin: 0;
+	padding: 0;
+
+}
+  .bloque1,.bloque2,.bloque3,.bloque4{
+       display:table-column;
+       width: 25%;
+}
+
+
+#contenido{
+margin:0 auto;
+width:900px;
+background-color: #C6d5c5;
+animation: slide 1s;
+
+}
+@keyframes slide {
+	0%	 {margin-top: 150%;}
+	60%	 {margin-top: -5%;}
+	100% {margin-top: 0%;}
+}
+
+
+/*Aqui aplicamos el display flex para que podamos modificar el comportamiento del contenedor
+luego definimos el comportamiento con flex-direction:row; para que se organicen sus elementos en fila*/
+
+#secundarias{
+width:100%;
+display:flex;
+flex-direction:row;
+}
+
+#secundarias2{
+width:100%;
+display:flex;
+flex-direction:row;
+
+}
+
+/*definimos el espacio de las imagenes en el contenedor para tamaño de escritorio que en este caso seria 50%
+
+como imagen1 e imagen2 ocupan cada uno 50% las dos suman 100%  y por ende pueden estar ambos en fila*/
+.imagenes1{
+width:50%;
+height:150px;
+background-color: #FFCC66;
+text-align:center;
+}
+.imagenes2{
+width:50%;
+height:150px;
+background-color: #FFCC66;
+text-align:center;
+}
+.imagenes3{
+width:50%;
+height:150px;
+background-color: #FFCC66;
+text-align:center;
+}
+#imgen1:hover{
+    transform: rotate(10deg);
+    box-shadow: 6px 6px 2px black;    /*el color sugerido no se nota tanto*/
+    border-right: 2px solid black;
+
+}
+#imgen2:hover{
+	transform: translate(-5px,30px);
+	box-shadow: 6px 6px 2px black;    /*el color sugerido no se nota tanto*/
+	border-right: 2px solid black;
+}
+#imge1{
+	  filter:blur(10px);
+	}
+#imge3{
+		filter:sepia(90%);
+	}	
+#imge2,#imge4,#imge6{
+		filter:grayscale(100%);
+	}	
+	
+
+
+/*----------------------------------------------------------------------------*/
+/*Estan son las propiedades que se aplican para resoluciones menores de 900px*/
+@media only screen and (max-width: 900px) {
+
+#contenido{
+width:100%;
+
+}
+/*aqui cambiamos el comportamiento de row a column para que cuando sea menos de 900px organice en columna y no en fila*/
+#secundarias{
+flex-direction:column;
+}
+
+#secundarias2{
+flex-direction:column;
+}
+
+/*aqui hacemos que las imagenes ahora para resoluciones menores no ocupen 50% cada una
+si no que ocupen 100% cada uno, de esta manera queda cada elemento ocupando el ancho total del dispostivo*/
+.imagenes1{
+width:100%;
+text-align:center;
+}
+
+.imagenes2{
+width:100%;
+text-align:center;
+}
+.imagenes3{
+width:100%;
+text-align:center;
+}
+#imgen1:hover{
+    transform: rotate(10deg);
+    box-shadow: 6px 6px 2px black;    /*el color sugerido no se nota tanto*/
+    border-right: 2px solid black;
+
+}
+#imgen2:hover{
+	transform: translate(-5px,30px);
+	box-shadow: 6px 6px 2px black;    /*el color sugerido no se nota tanto*/
+	border-right: 2px solid black;
+}
+#menuCabecera{
+    width: 100%;
+    text-align: center;
+	background-color:#5b7989;
+  }
+ footer {
+    flex-direction:column;
+		 	     	
+ }
+ .bloque1,.bloque2,.bloque3,.bloque4{      
+       width: 100%;
+	   
+}
+h1{
+    text-align: center;
+	width:100%
+}
+header{
+    border-top-left-radius:10px;
+	border-top-right-radius:10px;
+}
+}
